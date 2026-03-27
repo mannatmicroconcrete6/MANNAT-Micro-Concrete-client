@@ -15,6 +15,7 @@ const FinishSeeker = dynamic(() => import('@/components/ui/FinishSeeker'));
 const ColorPaletteTool = dynamic(() => import('@/components/ui/ColorPaletteTool'));
 const FAQSection = dynamic(() => import('@/components/ui/FAQSection'));
 const CTABand = dynamic(() => import('@/components/home/CTABand'));
+const InstagramReels = dynamic(() => import('@/components/ui/InstagramReels'));
 
 const homeFAQs = [
     {
@@ -161,6 +162,9 @@ export default function HomeClient() {
 
             {/* Section 3: Featured Real Projects */}
             <ProjectsGallery />
+
+            {/* Section: Social Media Showcase */}
+            <InstagramReels />
 
             {/* Section 4: Why Mannat */}
             <WhyMannat />

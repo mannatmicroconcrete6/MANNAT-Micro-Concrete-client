@@ -26,6 +26,7 @@ const NewProjectPage = () => {
         year: new Date().getFullYear(),
         client: '',
         tags: '',
+        instagramUrl: '',
         description: ''
     });
 
@@ -160,6 +161,16 @@ const NewProjectPage = () => {
                                     placeholder="e.g. 2500"
                                 />
                             </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-xs uppercase tracking-widest font-bold text-white/50">Instagram Reel URL (Optional)</label>
+                            <input
+                                value={formData.instagramUrl}
+                                onChange={e => setFormData({ ...formData, instagramUrl: e.target.value })}
+                                className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#d4af37]"
+                                placeholder="e.g. https://www.instagram.com/reels/C7e9X6_S9xJ/"
+                            />
                         </div>
 
                         <div className="space-y-2">

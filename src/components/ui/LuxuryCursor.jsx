@@ -43,38 +43,51 @@ const LuxuryCursor = () => {
         };
     }, [isVisible]);
 
-    if (!isVisible || isTouch) return null;
+    if (!isVisible) return null;
 
     return (
         <div className="fixed inset-0 pointer-events-none z-[99999]">
-            {/* The Main Dot */}
+            {/* The Main Arrow Cursor */}
             <motion.div
-                className="fixed top-0 left-0 w-2 h-2 bg-[#d4af37] rounded-full mix-blend-difference"
-                style={{
-                    x: mouseX,
-                    y: mouseY,
-                    translateX: '-50%',
-                    translateY: '-50%'
-                }}
-            />
-
-            {/* The Trailing Circle */}
-            <motion.div
-                className="fixed top-0 left-0 w-10 h-10 border border-[#d4af37]/50 rounded-full"
-                animate={{
-                    scale: isHovering ? 2 : 1,
-                    backgroundColor: isHovering ? 'rgba(212, 175, 55, 0.1)' : 'rgba(212, 175, 55, 0)',
-                }}
-                transition={{ type: "spring", damping: 30, stiffness: 200 }}
+                className="fixed top-0 left-0"
                 style={{
                     x: cursorX,
                     y: cursorY,
                     translateX: '-50%',
                     translateY: '-50%'
                 }}
-            />
+            >
+                <motion.div
+                    animate={{
+                        scale: isHovering ? 1.5 : 1,
+                        rotate: isHovering ? 45 : 0
+                    }}
+                    transition={{ type: "spring", damping: 30, stiffness: 200 }}
+                    className="relative"
+                >
+                    {/* Architectural Arrow Icon */}
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* Outer Glow Circle */}
+                        <circle cx="20" cy="20" r="18" stroke="#d4af37" strokeWidth="1" strokeDasharray="2 4" className="opacity-30" />
+                        
+                        {/* The Arrow */}
+                        <g className={isHovering ? "text-[#d4af37]" : "text-[#d4af37]"}>
+                            <path d="M14 20H26" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" strokeLinejoin="round"/>
+                            <path d="M22 16L26 20L22 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" strokeLinejoin="round"/>
+                        </g>
+                    </svg>
+                    
+                    {/* Hover Indicator Label */}
+                    <motion.span 
+                        animate={{ opacity: isHovering ? 1 : 0, x: isHovering ? 30 : 20 }}
+                        className="absolute left-full top-1/2 -translate-y-1/2 text-[10px] font-black uppercase tracking-[0.3em] text-[#d4af37] whitespace-nowrap bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-[#d4af37]/20"
+                    >
+                        View
+                    </motion.span>
+                </motion.div>
+            </motion.div>
 
-            {/* Subtle Glow */}
+            {/* Subtle Glow Trail */}
             <motion.div
                 className="fixed top-0 left-0 w-32 h-32 bg-[#d4af37]/5 rounded-full blur-3xl"
                 style={{
