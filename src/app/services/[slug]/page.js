@@ -50,6 +50,9 @@ export async function generateMetadata({ params }) {
     return {
         title: `${service.title} | Luxury Finishes by Mannat`,
         description: service.desc,
+        alternates: {
+            canonical: `/services/${slug}`,
+        },
         keywords: [
             `${service.title} India`, 
             `Premium ${service.title} Delhi`, 

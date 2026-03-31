@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL("https://www.mannatmicroconcrete.site"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Mannat Micro Concrete | Luxury Finishes. Zero Joints.",
   description: "Premium Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces across the entire country (Pan-India). Starting from ₹100/sq.ft.",
   keywords: [
