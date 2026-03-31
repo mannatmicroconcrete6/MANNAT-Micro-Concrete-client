@@ -22,7 +22,7 @@ export default function LayoutHandler({ children }) {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen">
+            <main className="min-h-screen overflow-x-hidden">
                 <PageWrapper>
                     {children}
                 </PageWrapper>
