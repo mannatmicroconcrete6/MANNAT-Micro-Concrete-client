@@ -1,6 +1,6 @@
 // client/src/app/sitemap.js
 export default function sitemap() {
-  const baseUrl = 'https://mannatmicroconcrete.com';
+  const baseUrl = 'https://www.mannatmicroconcrete.site';
   
   // List of constant routes
   const routes = [

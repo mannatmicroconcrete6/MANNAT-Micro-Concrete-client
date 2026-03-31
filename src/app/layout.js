@@ -9,15 +9,14 @@ import LayoutHandler from "@/components/layout/LayoutHandler";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://mannatmicroconcrete.com"),
+  metadataBase: new URL("https://www.mannatmicroconcrete.site"),
   title: "Mannat Micro Concrete | Luxury Finishes. Zero Joints.",
   description: "Premium Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces in India and Dubai. Starting from ₹100/sq.ft.",
   keywords: ["Microcement", "Venetian Plaster", "Epoxy Flooring", "Luxury Interiors", "Mannat Micro Concrete", "Seamless Surfaces", "Interior Design India"],
   authors: [{ name: "Mannat Micro Concrete" }],
   openGraph: {
     title: "Mannat Micro Concrete | Luxury Finishes. Zero Joints.",
-    description: "Premium Microcement and Venetian Plaster finishes for luxury spaces.",
-    url: "https://mannatmicroconcrete.com",
+    url: "https://www.mannatmicroconcrete.site",
     siteName: "Mannat Micro Concrete",
     images: [
       {
@@ -50,17 +49,20 @@ export const metadata = {
     icon: "https://lh3.googleusercontent.com/d/1rjha7IkwcHFlzTSeQdw5ojgRqCJouQCI",
     apple: "https://lh3.googleusercontent.com/d/1rjha7IkwcHFlzTSeQdw5ojgRqCJouQCI",
   },
+  verification: {
+    google: "google5816ae710b2c445b",
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Mannat Micro Concrete",
-  "image": "https://mannatmicroconcrete.com/logo.png",
-  "logo": "https://mannatmicroconcrete.com/logo.png",
+  "image": "https://www.mannatmicroconcrete.site/logo.png",
+  "logo": "https://www.mannatmicroconcrete.site/logo.png",
   "description": "Premium artisans for Microcement, Epoxy, and Venetian Plaster finishes for luxury homes and spaces in India and Dubai.",
-  "@id": "https://mannatmicroconcrete.com",
-  "url": "https://mannatmicroconcrete.com",
+  "@id": "https://www.mannatmicroconcrete.site",
+  "url": "https://www.mannatmicroconcrete.site",
   "telephone": "+91-9540490459",
   "address": {
     "@type": "PostalAddress",

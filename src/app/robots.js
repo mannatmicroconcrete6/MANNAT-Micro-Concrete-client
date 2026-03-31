@@ -6,6 +6,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://mannatmicroconcrete.com/sitemap.xml',
+    sitemap: 'https://www.mannatmicroconcrete.site/sitemap.xml',
   }
 }
