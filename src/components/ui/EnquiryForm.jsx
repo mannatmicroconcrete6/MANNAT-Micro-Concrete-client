@@ -84,7 +84,11 @@ const EnquiryForm = ({ onSuccess }) => {
             
             // Helpful message for "Failed to fetch" (usually server down)
             if (error.message === 'Failed to fetch') {
-                alert('Connection Error: The backend server appears to be offline. Make sure you have run "npm run dev" in the server directory and the server has started successfully.');
+                const isDev = process.env.NODE_ENV === 'development';
+                const msg = isDev 
+                    ? 'Connection Error: The backend server appears to be offline. Make sure you have run "npm run dev" in the server directory.'
+                    : 'System is currently undergoing maintenance. Please try again after 5 minutes or contact us directly on WhatsApp.';
+                alert(msg);
             } else {
                 alert(`Error submitting form: ${error.message}`);
             }
