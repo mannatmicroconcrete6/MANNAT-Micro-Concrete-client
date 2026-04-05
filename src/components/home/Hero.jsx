@@ -44,7 +44,7 @@ const Hero = () => {
                     <h1 className="text-4xl md:text-7xl font-light tracking-tight text-black mb-6 md:mb-10 leading-[1.1] uppercase text-center md:text-left">
                         <span className="block font-medium italic serif tracking-wider opacity-100 mb-2">Mannat</span>
                         <span className="text-black/60 font-light block">Micro Concrete.</span>
-                        <span className="sr-only">Premium Microcement and Venetian Plaster Finishes in India</span>
+                        <span className="sr-only">Premium Micro Concrete, Microcement and Venetian Plaster Finishes in India</span>
                     </h1>
 
                     <motion.p
